@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+<h1>Cadastro</h1>
+
+<form action="/cadastro" method="post">
+
+    <input
+        type="text"
+        name="nome"
+        placeholder="Nome">
+
+    <br><br>
+
+    <input
+        type="email"
+        name="email"
+        placeholder="E-mail">
+
+    <br><br>
+
+    <input
+        type="text"
+        name="usuario"
+        placeholder="Usuário">
+
+    <br><br>
+
+    <input
+        type="password"
+        name="senha"
+        placeholder="Senha">
+
+    <br><br>
+
+    <button>Cadastrar</button>
+
+</form>
+
+
+
+{% endblock %}

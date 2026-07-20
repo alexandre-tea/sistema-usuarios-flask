@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+<h1>Alterar Senha</h1>
+
+<form method="post">
+
+    <input
+        type="password"
+        name="senha_atual"
+        placeholder="Senha atual">
+
+    <br><br>
+
+    <input
+        type="password"
+        name="nova_senha"
+        placeholder="Nova senha">
+
+    <br><br>
+
+    <input
+        type="password"
+        name="confirmar_senha"
+        placeholder="Confirmar nova senha">
+
+    <br><br>
+
+    <button>Salvar</button>
+
+</form>
+
+{% endblock %}

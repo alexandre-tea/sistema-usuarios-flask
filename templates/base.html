@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Usuários</title>
+    <link
+        rel="stylesheet"
+        href="{{url_for('static',filename='css/stilo.css')}}">
+</head>
+
+<body>
+
+    <h1>Sistema de Usuários</h1>
+
+    {% if "usuario" in session %}
+
+        <p>Olá, <strong>{{ session["usuario"] }}</strong>!</p>
+
+        <nav>
+            <a href="/">Início</a> |
+            <a href="/home">Home</a> |
+            <a href="/perfil">Perfil</a> |
+            <a href="/senha">Alterar Senha</a> |
+            <a href="/excluir">Excluir conta?</a> |
+            <a href="/logout">Sair</a>
+        </nav>
+
+    {% else %}
+
+        <nav>
+            <a href="/">Início</a> |
+            <a href="/login">Login</a> |
+            <a href="/cadastro">Cadastro</a>
+        </nav>
+
+    {% endif %}
+
+    <hr>
+
+    {% with mensagens = get_flashed_messages() %}
+
+        {% if mensagens %}
+
+            {% for mensagem in mensagens %}
+
+                <p>{{ mensagem }}</p>
+
+            {% endfor %}
+
+        {% endif %}
+
+    {% endwith %}
+
+    {% block conteudo %}
+    {% endblock %}
+
+</body>
+
+</html>

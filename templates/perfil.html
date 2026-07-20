@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+<h1>Perfil</h1>
+
+<form action="/perfil" method="post">
+
+    <input
+        type="text"
+        name="nome"
+        value="{{ usuario['nome'] }}">
+
+    <br><br>
+
+    <input
+        type="email"
+        name="email"
+        value="{{ usuario['email'] }}">
+
+    <br><br>
+
+    <button>Salvar Alterações</button>
+
+</form>
+
+<br>
+
+<a href="/excluir">Excluir Conta</a>
+
+{% endblock %}

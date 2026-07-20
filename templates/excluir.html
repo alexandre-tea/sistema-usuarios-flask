@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+
+<h1>Excluir Conta</h1>
+
+<p>Tem certeza que deseja excluir sua conta?</p>
+
+<p>Essa ação não poderá ser desfeita.</p>
+
+<form method="post">
+
+    <button type="submit">
+        Excluir Conta
+    </button>
+
+</form>
+
+<br>
+
+<a href="/perfil">
+    Cancelar
+</a>
+
+{% endblock %}
